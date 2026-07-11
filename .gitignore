@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# node
+node_modules/
+npm-debug.log*
+*.log
+
+# local working data (kit convention: real game data never gets committed)
+local/
