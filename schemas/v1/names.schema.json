@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lerugray/wright-kit/schemas/v1/names.schema.json",
+  "title": "wright-kit names.json v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "names"
+  ],
+  "properties": {
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[0-9]{4}$": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

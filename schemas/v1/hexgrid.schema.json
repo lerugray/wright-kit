@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lerugray/wright-kit/schemas/v1/hexgrid.schema.json",
+  "title": "wright-kit hexgrid.json v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "grid_version",
+    "image_full",
+    "n_cols",
+    "n_rows",
+    "x_intercept_col0",
+    "col_pitch_x",
+    "y_intercept_row0",
+    "row_pitch_y",
+    "even_col_y_offset"
+  ],
+  "properties": {
+    "_comment": {
+      "type": "string"
+    },
+    "grid_version": {
+      "const": 1
+    },
+    "image_full": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "n_cols": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "n_rows": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "x_intercept_col0": {
+      "type": "number"
+    },
+    "col_pitch_x": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "y_intercept_row0": {
+      "type": "number"
+    },
+    "row_pitch_y": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "even_col_y_offset": {
+      "type": "number"
+    }
+  }
+}

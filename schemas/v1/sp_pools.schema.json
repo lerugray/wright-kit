@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lerugray/wright-kit/schemas/v1/sp_pools.schema.json",
+  "title": "wright-kit sp_pools.json v1",
+  "type": "object",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^[A-Z][A-Z0-9_]*$": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sp_count",
+        "av_per_sp"
+      ],
+      "properties": {
+        "sp_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "av_per_sp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

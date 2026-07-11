@@ -52,7 +52,7 @@ sitting there in files you can read.
 | hexwright | public, v2.1 |
 | musterwright | public, v0.1 |
 | wargame-map-parser | public |
-| format spec (SPEC.md + JSON Schemas) | v1 in progress |
+| format spec ([SPEC.md](SPEC.md) + [JSON Schemas](schemas/v1/)) | v1 |
 | publish layer (styled map + countersheet export) | in design |
 
 The kit was extracted from real production, not designed on a whiteboard:

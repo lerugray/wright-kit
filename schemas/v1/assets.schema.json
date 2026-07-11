@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lerugray/wright-kit/schemas/v1/assets.schema.json",
+  "title": "wright-kit assets.json v1",
+  "type": "object",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^[A-Z][A-Z0-9_]*$": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    }
+  },
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "faction",
+        "av",
+        "dv",
+        "mp",
+        "type",
+        "size"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "faction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "av": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dv": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "size": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

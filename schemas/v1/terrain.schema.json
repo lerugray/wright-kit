@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lerugray/wright-kit/schemas/v1/terrain.schema.json",
+  "title": "wright-kit terrain.json v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "terrain"
+  ],
+  "properties": {
+    "_comment": {
+      "type": "string"
+    },
+    "terrain": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[0-9]{4}$": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

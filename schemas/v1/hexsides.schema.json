@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lerugray/wright-kit/schemas/v1/hexsides.schema.json",
+  "title": "wright-kit hexsides.json v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_comment": {
+      "type": "string"
+    }
+  },
+  "patternProperties": {
+    "^[A-Za-z][A-Za-z0-9_]*$": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    }
+  },
+  "$defs": {
+    "hexCode": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$"
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "a",
+        "b"
+      ],
+      "properties": {
+        "a": {
+          "$ref": "#/$defs/hexCode"
+        },
+        "b": {
+          "$ref": "#/$defs/hexCode"
+        }
+      }
+    }
+  }
+}
